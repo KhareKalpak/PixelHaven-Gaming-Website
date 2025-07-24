@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+  position: relative; /* Enable positioning for the pseudo-element */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden; /* Prevent overflow */
+}
+
+.wrapper::before {
+  content: ''; /* Required for pseudo-element */
+  position: absolute; /* Position it behind the content */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../login/anime.png'); /* Corrected path */
+  background-repeat: no-repeat; /* Separate property */
+  background-size: cover; /* Separate property */
+  background-position: center; /* Separate property */
+  animation: animateBg 5s linear infinite; /* Animation applied here */
+  z-index: -2; /* Set behind other content */
+}
+
+.wrapper::after {
+  content: ''; /* Required for overlay */
+  position: absolute; /* Position it behind the content */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.55); /* Black background with 45% opacity */
+  z-index: -1; /* Set above the background image */
+}
+@keyframes animateBg {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.login-content {
+  position: relative;
+  display: flex;
+  margin-top: 0px; /* Adjust as necessary */
+  margin-bottom: 70px; /* Adjust as necessary */
+  width: 480px;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-image {
+  aspect-ratio: 1.5;
+  object-fit: contain;
+  object-position: center;
+  width: 200px;
+  max-width: 100%;
+  transition: transform 2s ease; /* Add transition for the transform property */
+}
+
+.shrink {
+  transform: translate(-100vw, 0) scale(0.5); /* Shrink and move left */
+}
+.welcome-message {
+  font-size: 50px; /* Optional: Reduce font size a bit */
+  align-self: center;
+  font-weight: 400;
+  width: 700px;
+  text-align: center;
+  margin-top: -20px;
+  color: rgba(255, 255, 255, 1);
+}
+.input-container {
+    display: flex;
+    flex-direction: column;
+    width: 480px; /* Match the width of the buttons */
+    max-width: 100%;
+  }
+  
+  .input-box {
+    border-radius: 100px;
+    background-color: rgba(11, 21, 51, 1); /* Background color for textboxes */
+    border: 2px solid rgba(247, 66, 243, 1); /* Border color */
+    display: flex;
+    width: 100%; /* Full width */
+    padding: 15px 50px; /* Padding */
+    margin-top: 20px; /* Space between textboxes */
+    height: 70px;
+    font-family: Quantico, -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 28px; /* Font size */
+    color: rgb(241, 241, 241); /* Text color */
+    text-align: left;
+  }
+  
+  .input-box::placeholder {
+    color: rgba(150, 150, 150, 1); /* Placeholder color */
+  }
+  
+  .signup-section {
+    display: flex;
+    margin-top: 30px; /* Increased margin to move it lower */
+    width: 305px;
+    max-width: 100%;
+    align-items: center; /* Changed to center for better alignment */
+    gap: 8px; /* Reduce the gap size */
+    font-size: 20px; /* Reduced font size for a smaller appearance */
+  }
+  
+  .no-account {
+    flex-grow: 1;
+    font-weight: 400;
+    font-size: 18px; 
+    color: rgba(255, 255, 255, 1);/* Optional: use a lighter weight */
+  }
+  
+  .login-link {
+    flex-grow: 1;
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 600; /* Optional: make the link bolder */
+    font-size: 20px; /* Ensure the sign-up link matches the reduced font size */
+  }
+/* Login buttons */
+.login-button {
+  border-radius: 100px;
+  background-color: rgba(11, 21, 51, 1);
+  border: 3px solid rgba(247, 66, 243, 1);
+  display: flex;
+  width: 480px; /* Keep the width for consistency */
+  max-width: 100%;
+  padding: 10px 50px; /* Reduced padding */
+  align-items: center;
+  height: 70px; /* Reduced height */
+  cursor: pointer;
+  font-family: Quantico, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 28px; /* Reduced font size */
+  color: rgba(255, 255, 255, 1);
+  text-align: left;
+}
+.cta {
+    display: flex;
+    position: relative;
+    padding: 11px 33px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    background: #6225e6;
+    transition: 1s;
+    box-shadow: 6px 6px 0 black;
+    transform: skewX(-15deg);
+    border: none;
+    cursor: pointer;
+    left: 0%;
+    margin-top: 30px;
+  }
+  
+  .cta:focus {
+    outline: none;
+  }
+  
+  .cta:hover {
+    transition: 0.5s;
+    box-shadow: 10px 10px 0 #fbc638;
+  }
+  
+  .cta .second {
+    transition: 0.5s;
+    margin-right: 0px;
+  }
+  
+  .cta:hover .second {
+    transition: 0.5s;
+    margin-right: 45px;
+  }
+  
+  .span {
+    transform: skewX(15deg);
+  }
+  
+  .second {
+    width: 20px;
+    margin-left: 30px;
+    position: relative;
+    top: 12%;
+  }
+  
+  .one {
+    transition: 0.4s;
+    transform: translateX(-60%);
+  }
+  
+  .two {
+    transition: 0.5s;
+    transform: translateX(-30%);
+  }
+  
+  .cta:hover .three {
+    animation: color_anim 1s infinite 0.2s;
+  }
+  
+  .cta:hover .one {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.6s;
+  }
+  
+  .cta:hover .two {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.4s;
+  }
+  
+  @keyframes color_anim {
+    0% {
+      fill: white;
+    }
+  
+    50% {
+      fill: #fbc638;
+    }
+  
+    100% {
+      fill: white;
+    }
+  }
+  ul {
+    list-style: none;
+  }
+
+/* Media queries */
+@media (max-width: 991px) {
+  .login-container {
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 100px;
+  }
+
+  .login-content {
+    margin-bottom: 10px;
+  }
+
+  .welcome-message {
+    max-width: 100%;
+    font-size: 40px;
+  }
+  
+}

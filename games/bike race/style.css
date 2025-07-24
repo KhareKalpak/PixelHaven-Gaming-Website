@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+.gameContainer{
+    background: url('./images/bg.JPG') no-repeat bottom center/cover;
+    width: 100vw;
+    height: 100vh;
+}
+.player{
+    background: url('./images/bike.png') no-repeat center center/cover;
+    width: 144px;
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    height: 95px;
+    z-index: 1;
+}
+.opponent{
+    background: url('./images/car.png') no-repeat center center/cover;
+    width: 220px;
+    height: 100px;
+    position: absolute;
+    bottom: 30px;
+    left: -20vw;
+}
+
+.gameOver{
+    text-align: center;
+}
+.animateBike{
+    animation-name: animateBike;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+}
+
+.animateCar{
+    animation-name: animateCar;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+    transition: animation-duration ease-in-out animation-duration 5s;
+}
+.gameOverAnimate{
+    animation: gameOverAnimate;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+.score{
+    font-size: 30px;
+    background-color: black;
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    color: white;
+}
+@keyframes animateBike{
+    0%{
+    bottom: 30px;
+    }
+    10%{
+        transform: rotate(-60deg);
+    }
+    50%{
+        bottom: 140px;
+    }
+    100%{
+      transform: rotate(0deg);
+    }
+}
+@keyframes animateCar {
+    0%{
+     left: 100vw
+    }
+    100%{
+     left: -20vw;
+    }
+}
+@keyframes gameOverAnimate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+        left: 100vw;
+        bottom: 200px;
+    }
+}

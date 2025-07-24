@@ -1,0 +1,469 @@
+/* Footer Styles */
+.footer {
+    border-radius: 0;
+}
+
+.footer-container {
+    background-color: #000;
+    display: flex;
+    width: 1520px;
+    padding: 90px 20px; /* Reduced padding top and bottom */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content {
+    display: flex;
+    width: 100%;
+    max-width: 1200px; /* Reduced max-width */
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.footer-top {
+    align-self: center;
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: -30px;
+    align-items: flex-start;
+    gap: 20px 20px;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    aspect-ratio: 1.29;
+    object-fit: contain;
+    object-position: center;
+    width: 100px; /* Reduced logo size */
+    margin-top: 90px; /* Reduced margin */
+    margin-left: -20px;;
+    flex-shrink: 0;
+    max-width: 100%;
+}
+
+.footer-links-container {
+    align-self: start;
+    flex-grow: 1;
+}
+
+.footer-links-row {
+    gap: 15px; /* Reduced gap */
+    display: flex;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+}
+
+.company-info {
+    width: 40%; /* Reduced width */
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    font-family: Poppins, -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 14px; /* Reduced font size */
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    margin-left: 400px;
+}
+
+.column-title {
+    font-size: 20px; /* Reduced title size */
+    margin: 0;
+    font-weight: 500; /* Slightly bolder for better visibility */
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px; /* Reduced margin */
+}
+
+.footer-link {
+    text-decoration: none; /* Remove underline */
+    margin-bottom: 15px; /* Space below each link */
+}
+
+.footer-link:last-child {
+    margin-bottom: 0;
+}
+
+.support-info {
+    width: 40%; /* Adjusted to fit better with the company info */
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: Poppins, -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 14px; /* Reduced font size */
+    color: #fff;
+    font-weight: 400;
+    margin-left: 40px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    margin-top: 30px; /* Reduced margin */
+}
+
+.contact-info .footer-link:first-child {
+    align-self: stretch;
+    text-decoration: underline;
+}
+
+.contact-info .footer-link:last-child {
+    margin-top: 15px; /* Reduced margin */
+}
+
+.footer-divider {
+    border-color: #797979;
+    border-style: solid;
+    border-width: 1px;
+    margin: 50px 0 10px; /* Reduced margin */
+    height: 2px; /* Reduced divider height */
+}
+
+.footer-bottom {
+    display: flex;
+    margin-top: 40px; /* Reduced margin */
+    width: 100%;
+    align-items: stretch;
+    gap: 15px; /* Reduced gap */
+    font-family: Poppins, -apple-system, Roboto, Helvetica, sans-serif;
+    color: #fff;
+    font-weight: 400;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.payment-section {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.payment-title {
+    align-self: center;
+    font-size: 18px; /* Reduced title size */
+    margin: 0; /* Reset margins */
+}
+
+.payment-methods-img {
+    aspect-ratio: 10.31;
+    object-fit: contain;
+    object-position: center;
+    width: 400px; /* Reduced image size */
+    margin-top: 10px; /* Reduced margin */
+}
+
+.policy-links {
+    align-self: start;
+    display: flex;
+    align-items: stretch;
+    gap: 20px; /* Reduced gap */
+    font-size: 14px; /* Adjusted link font size */
+}
+
+.policy-link {
+    text-decoration: none;
+}
+/* social icon */
+/**********/
+/* Config */
+/**********/
+
+.social-clock {
+    --count-buttons: 7;
+    --size-button: 4rem;
+    --size-clock: 16rem;
+    --size-padding: 0.5rem;
+    position: relative; /* Ensure it's positioned relative to its parent */
+    left: 60px;
+    margin-top: -40px; /* Move it up: Adjust this value as needed */
+    margin-left: auto;
+  }
+  
+  /*************/
+  /* Container */
+  /*************/
+  
+  .social-clock {
+    --size: var(--size-clock);
+  
+    border-radius: var(--size);
+    cursor: default;
+    height: var(--size);
+    pointer-events: none;
+    position: relative;
+    width: var(--size);
+    transition: all 0.5s linear;
+  }
+  .social-clock,
+  .social-clock__trigger {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /***********/
+  /* Trigger */
+  /***********/
+  
+  /* Trigger */
+  .social-clock__trigger {
+    --size: var(--size-button);
+  
+    background: #000;
+    border: none;
+    border-radius: var(--size);
+    height: var(--size);
+    pointer-events: all;
+    width: var(--size);
+    z-index: 3;
+  }
+  /* Trigger - Icon */
+  .social-clock__trigger svg {
+    --size: calc(0.65 * var(--size-button));
+  
+    fill: #fff;
+    height: var(--size);
+    width: var(--size);
+    padding-right: calc(0.05 * var(--size-button));
+  }
+  
+  /***********/
+  /* Buttons */
+  /***********/
+  
+  /* Wrapper */
+  .social-clock__list {
+    --size: calc(var(--size-button) + var(--size-padding));
+  
+    border-radius: inherit;
+    height: var(--size);
+    left: calc(50% - var(--size) / 2);
+    pointer-events: all;
+    position: absolute;
+    top: calc(50% - var(--size) / 2);
+    width: var(--size);
+    transition:
+      all 0.3s ease-in-out,
+      transform 0.3s linear;
+  }
+  /* Wrapper - Interactions */
+  .social-clock:hover .social-clock__list {
+    --size: 100%;
+  
+    transform: rotate(360deg);
+  }
+  
+  /* Button */
+  .social-clock__button {
+    --angle: calc(var(--index, 0) * 360deg / var(--count-buttons));
+    --height: calc(100% - var(--size-padding) * 2);
+    --size: var(--size-button);
+  
+    background: none;
+    border: none;
+    border-radius: var(--size);
+    box-sizing: content-box;
+    cursor: pointer;
+    height: var(--height);
+    left: calc(50% - var(--size) / 2);
+    pointer-events: none;
+    position: absolute;
+    top: calc(50% - var(--height) / 2);
+    transform: rotate(var(--angle));
+    width: var(--size);
+  }
+  /* Button - Background */
+  .social-clock__button::after,
+  .social-clock__button::before {
+    --size: var(--size-button);
+  
+    border-radius: inherit;
+    box-sizing: border-box;
+    content: "";
+    left: calc(50% - var(--size) / 2);
+    position: absolute;
+    width: var(--size);
+  }
+  /* Button - Background - Icon */
+  .social-clock__button::before {
+    --fill-opacity: 0.5;
+  
+    background: rgba(var(--color), var(--fill-opacity));
+    height: var(--size);
+    pointer-events: all;
+    top: 0;
+    transition: background 0.3s linear;
+  }
+  /* Button - Background - Interactions */
+  .social-clock:hover .social-clock__button::before {
+    background: rgba(0, 0, 0, var(--fill-opacity));
+  }
+  .social-clock__button::after {
+    --fill-opacity: 0.7;
+    --fill-size: 0;
+    --height: calc(50% + var(--size) / 2);
+  
+    bottom: calc(100% - var(--height));
+    box-shadow: inset 0 var(--fill-size) 0 rgba(var(--color), var(--fill-opacity));
+    height: var(--height);
+    pointer-events: none;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  /* Button - Interactions */
+  .social-clock__button:hover::after {
+    --fill-size: calc(-0.5 * (var(--size-clock) + var(--size)));
+  
+    pointer-events: all;
+  }
+  .social-clock__button:active::after {
+    --fill-opacity: 1;
+  }
+  
+  /* Button - Icon */
+  .social-clock__button svg {
+    --padding: calc((var(--size-button) - var(--size)) / 2);
+    --size: calc(0.65 * var(--size-button));
+  
+    fill: #fff;
+    height: var(--size);
+    left: var(--padding);
+    position: absolute;
+    top: var(--padding);
+    transform: rotate(calc(-1 * var(--angle)));
+    width: var(--size);
+    z-index: 2;
+  }
+  /* Button - Socials */
+  .social-clock__button.discord {
+    --color: 88, 101, 242;
+  }
+  .social-clock__button.facebook {
+    --color: 24, 119, 242;
+  }
+  .social-clock__button.github {
+    --color: 0, 0, 0;
+  }
+  .social-clock__button.instagram {
+    --color: 225, 48, 108;
+  }
+  .social-clock__button.line {
+    --color: 0, 195, 0;
+  }
+  .social-clock__button.linkedin {
+    --color: 10, 102, 194;
+  }
+  .social-clock__button.reddit {
+    --color: 255, 87, 0;
+  }
+  .social-clock__button.tiktok {
+    --color: 0, 0, 0;
+  }
+  .social-clock__button.twitch {
+    --color: 145, 70, 255;
+  }
+  .social-clock__button.twitter {
+    --color: 29, 161, 242;
+  }
+  .social-clock__button.whatsapp {
+    --color: 37, 211, 102;
+  }
+  .social-clock__button.youtube {
+    --color: 205, 32, 31;
+  }
+  
+  /* Button - Order */
+  .social-clock__button:nth-child(1) {
+    --index: 0;
+  }
+  .social-clock__button:nth-child(2) {
+    --index: 1;
+  }
+  .social-clock__button:nth-child(3) {
+    --index: 2;
+  }
+  .social-clock__button:nth-child(4) {
+    --index: 3;
+  }
+  .social-clock__button:nth-child(5) {
+    --index: 4;
+  }
+  .social-clock__button:nth-child(6) {
+    --index: 5;
+  }
+  .social-clock__button:nth-child(7) {
+    --index: 6;
+  }
+  .social-clock__button:nth-child(8) {
+    --index: 7;
+  }
+  .social-clock__button:nth-child(9) {
+    --index: 8;
+  }
+  .social-clock__button:nth-child(10) {
+    --index: 9;
+  }
+  
+
+/* Mobile Responsiveness */
+@media (max-width: 991px) {
+    .footer-container {
+        padding: 40px 20px; /* Maintain reduced padding */
+    }
+
+    .footer-content {
+        max-width: 100%;
+    }
+
+    .footer-top {
+        max-width: 100%;
+    }
+
+    .footer-links-container {
+        max-width: 100%;
+    }
+
+    .footer-links-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .company-info,
+    .support-info {
+        width: 100%; /* Full width on mobile */
+        margin-top: 20px; /* Reduced margin */
+    }
+
+    .footer-nav {
+        margin-top: 20px; /* Adjusted margin */
+    }
+
+    .social-icon {
+        margin-top: 20px; /* Reduced margin */
+    }
+    
+    .footer-divider {
+        max-width: 100%;
+        margin-top: 20px; /* Reduced margin */
+    }
+
+    .footer-bottom {
+        gap: 10px; /* Lowered gap */
+    }
+
+    .payment-methods-img {
+        max-width: 100%; /* Responsive image width */
+    }
+}

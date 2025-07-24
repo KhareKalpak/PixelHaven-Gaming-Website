@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLAPPY BIRD!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header-container">
+        <nav class="navbar">
+          <div class="logo-container">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/c86f67e371e042a5bc88f2aa9d3f16b2/255bafb4dc49c24dfa2f6f883923ea404024b436?placeholderIfAbsent=true"
+              alt="Logo"
+              class="logo-image"
+            />
+          </div>
+          <ul class="nav-links">
+            <li class="nav-item"><a href="#arcade">Arcade</a></li>
+            <li class="nav-item"><a href="#leaderboards">Leaderboards</a></li>
+          </ul>
+          <div class="user-actions">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/c86f67e371e042a5bc88f2aa9d3f16b2/d34866848e55c9f66d7314fcf76389c8f4cda14a?placeholderIfAbsent=true"
+              alt="User icon"
+              class="user-icon"
+            />
+          </div>
+        </nav>
+      </header>
+    <div class="container">
+        <div class="game-title">
+            <h1>FLAPPY BIRD</h1>
+        </div>
+        <div class="game-screen">
+            <canvas id="game" width="300" height="500"></canvas>
+            <p id="description" class="game-description">Press 'spacebar' or 'click' to begin</p>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Russo One', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: #0B1533;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+  /* Header container */
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    padding-bottom: 17px;
+    border-radius: 0;
+    width: 100%;
+  }
+  
+  /* Navigation bar */
+  .navbar {
+    background-color: rgba(11, 21, 51, 1);
+    display: flex;
+    width: 100%;
+    padding-left: 14px;
+    padding-right: 31px;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: -1px;
+    padding-top: 2px; /* Reduce padding at the top */
+  padding-bottom: 2px; 
+  }
+  
+  @media (max-width: 991px) {
+    .navbar {
+      max-width: 100%;
+      padding-right: 20px;
+    }
+  }
+  
+  /* Logo section */
+  .logo-container {
+    border-radius: 34px;
+    background-color: #0B1533;
+    align-self: stretch;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    min-height: 70x;
+    padding: 14px 10px;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: stretch;
+    justify-content: center;
+  }
+  
+  .logo-image {
+    aspect-ratio: 2.02;
+    object-fit: contain;
+    object-position: center;
+    width: 100px;
+  }
+  
+  /* Navigation links */
+  .nav-links {
+    align-self: stretch;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: auto;
+    margin-bottom: auto;
+    align-items: stretch;
+    gap: 30px;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+    white-space: nowrap;
+    list-style-type: none;
+    margin-left: 55px;
+  }
+  
+  @media (max-width: 991px) {
+    .nav-links {
+      white-space: initial;
+    }
+  }
+  
+  .nav-item {
+    flex-basis: auto;
+  }
+  
+  .nav-item:first-child {
+    flex-grow: 1;
+  }
+  
+  .nav-item a {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+  }
+  
+  /* User actions section */
+  .user-actions {
+    align-self: stretch;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    align-items: stretch;
+    gap: 39px;
+    font-size: 22px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+  }
+  
+  .signup-button {
+    border-radius: 15px;
+    background-color: rgba(11, 21, 51, 1);
+    box-shadow: 0px 0px 9px rgba(202, 129, 175, 1);
+    padding: 5px 30px;
+    border: none;
+    color: white;
+    font-family:
+      "Quantico",
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 991px) {
+    .signup-button {
+      padding: 7px 20px;
+    }
+  }
+  
+  .user-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 30px;
+    margin: auto 0;
+    flex-shrink: 0;
+  }
+  
+h1 {
+    color: rgb(0, 211, 53);
+    letter-spacing: 27px;
+    font-size: 3rem;
+}
+canvas {
+    background-color: rgb(0, 0, 0);
+    border: white solid 7px;
+    border-radius: 4px;
+}
+
+.score {
+    color: white;
+    letter-spacing: 5px;
+}
+#score { /*number display*/
+    color: white;
+}
+
+#start-menu{
+    position: absolute;
+    text-align: center;
+    top: 50%; /* Adjust depending on where you want it */
+    left: 40%;
+    letter-spacing: 4px;
+    color: rgb(229, 233, 0);
+}
+
+/* #pause {
+    position: absolute;
+    background-color: black;
+    border: rgb(78, 2, 255) 10px dotted;
+    visibility: hidden;
+} */
+
+/* .game-paused {
+    font-size: 2rem;
+    color: white;
+    padding: 1rem;
+} */
+
+#game-over {
+    position: absolute;
+    bottom: 8rem;
+    text-align: center;
+    padding: 5rem;
+
+    font-size: 2rem;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    border: 12px red solid;
+    border-radius: 4px;
+
+    visibility: hidden;
+    transform: rotate(-7deg);
+}
+
+#game-over h2 {
+color: red ;
+}

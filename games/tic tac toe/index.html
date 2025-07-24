@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header-container">
+        <nav class="navbar">
+          
+        </nav>
+      </header>
+<div class="containerMain">
+    <h1>Tic-Tac-Toe</h1>
+
+    <!-- Opponent Selection -->
+    <div id="opponent-selection">
+      <h2>Select Your Opponent:</h2>
+      <button onclick="startGame('kalpak')">Play Against Kalpak</button>
+      <button onclick="startGame('maddi')">Play Against Maddi</button>
+  </div>
+
+  
+  
+    <!-- Game Area (Initially Hidden) -->
+    <div class="play-area" style="display: none;">
+        <div id="block_0" class="block"></div>
+        <div id="block_1" class="block"></div>
+        <div id="block_2" class="block"></div>
+        <div id="block_3" class="block"></div>
+        <div id="block_4" class="block"></div>
+        <div id="block_5" class="block"></div>
+        <div id="block_6" class="block"></div>
+        <div id="block_7" class="block"></div>
+        <div id="block_8" class="block"></div>
+    </div>
+    
+    <div id="scoreboard" style="display: none;">
+        <h2 style="margin: 0; padding: 0;">Scoreboard:</h2> <!-- Remove margin -->
+        <p style="margin: 0; padding: 0;">Player: <span id="player-score">0</span></p>
+        <p id="opponent-name" style="margin: 0; padding: 0;"></p>
+        <p style="margin: 0; padding: 0;"><span id="opponent-score">0</span></p>
+    </div>
+    <!-- results -->
+    <div class="onoff">
+        <h4>Dark Mode</h4>
+        <label class="switch">
+            <input onclick="myFunction()" type="checkbox">
+            <span class="slider round"></span>
+        </label>
+    </div>
+    <h2 id="winner"></h2>
+    <button onclick="reset_board()">RESET BOARD</button>
+</div>
+
+<!-- Javascript files -->
+<script src="script.js" type="text/Javascript"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<canvas id="my-canvas"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"></script>
+</body>
+</html>

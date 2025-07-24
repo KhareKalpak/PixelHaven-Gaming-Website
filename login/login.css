@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden; 
+}
+
+.wrapper::before {
+  content: ''; /* Required for pseudo-element */
+  position: absolute; /* Position it behind the content */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../login/anime.png'); /* Corrected path */
+  background-repeat: no-repeat; /* Separate property */
+  background-size: cover; /* Separate property */
+  background-position: center; /* Separate property */
+  animation: animateBg 5s linear infinite; /* Animation applied here */
+  z-index: -2; /* Set behind other content */
+}
+.wrapper::after {
+  content: ''; /* Required for overlay */
+  position: absolute; /* Position it behind the content */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.55); /* Black background with 45% opacity */
+  z-index: -1; /* Set above the background image */
+}
+
+@keyframes animateBg {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.login-content {
+  position: relative;
+  display: flex;
+  margin-top: -200px; /* Increased negative margin to move content up */
+  margin-bottom: -46px; /* Keep this as is */
+  width: 972px;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-image {
+  aspect-ratio: 1.5;
+  object-fit: contain;
+  object-position: center;
+  width: 200px;
+  max-width: 100%;
+  transition: transform 2s ease; /* Add transition for the transform property */
+}
+
+.shrink {
+  transform: translate(-100vw, 0) scale(0.5); /* Shrink and move left */
+}
+
+.welcome-message {
+  font-size: 60px; /* Optional: Reduce font size a bit */
+  align-self: center;
+  font-weight: 400;
+  margin-top: -20px;
+  color: rgba(255, 255, 255, 1);
+}
+
+/* Login buttons */
+.login-button {
+  border-radius: 100px;
+  background-color: rgba(11, 21, 51, 1);
+  border: 3px solid rgba(247, 66, 243, 1);
+  display: flex;
+  width: 480px; /* Keep the width for consistency */
+  max-width: 100%;
+  padding: 10px 50px; /* Reduced padding */
+  align-items: center;
+  height: 70px; /* Reduced height */
+  cursor: pointer;
+  font-family: Quantico, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 28px; /* Reduced font size */
+  color: rgba(255, 255, 255, 1);
+  text-align: left;
+}
+
+.email-button {
+  margin-top: 40px; /* Reduced margin to bring it closer */
+  gap: 30px; /* Reduced gap size */
+}
+
+.google-button,
+.discord-button,
+.github-button {
+  margin-top: 20px; /* Reduced margin to bring it closer */
+  gap: 30px; /* Reduced gap size */
+}
+
+.button-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 39px;
+  flex-shrink: 0;
+}
+
+.google-button .button-icon,
+.github-button .button-icon {
+  width: 43px;
+}
+
+.button-text {
+  flex-grow: 1;
+  flex-basis: auto;
+}
+
+.signup-section {
+  display: flex;
+  margin-top: 15px; /* Reduced margin to move it closer to buttons */
+  width: 305px;
+  max-width: 100%;
+  align-items: center; /* Changed to center for better alignment */
+  gap: 8px; /* Reduce the gap size */
+  font-size: 20px; /* Reduced font size for a smaller appearance */
+}
+
+.no-account {
+  flex-grow: 1;
+  font-weight: 400; 
+  color: rgba(255, 255, 255, 1);/* Optional: use a lighter weight */
+}
+
+.sign-up-link {
+  flex-grow: 1;
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600; /* Optional: make the link bolder */
+  font-size: 20px; /* Ensure the sign-up link matches the reduced font size */
+}
+
+/* Media queries */
+@media (max-width: 991px) {
+  .login-container {
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 100px;
+  }
+
+  .login-content {
+    margin-bottom: 10px;
+  }
+
+  .welcome-message {
+    max-width: 100%;
+    font-size: 40px;
+  }
+
+  .email-button {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 40px;
+  }
+
+  .google-button,
+  .discord-button,
+  .github-button {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
